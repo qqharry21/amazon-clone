@@ -1,16 +1,30 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/** @format */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply p-0 m-0 font-Poppins;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+  .link {
+    @apply cursor-pointer hover:underline;
+  }
 
-* {
-  box-sizing: border-box;
+  .button {
+    @apply cursor-pointer p-2 rounded-lg bg-gradient-to-b from-yellow-200 w-full to-yellow-400 flex justify-center space-x-1 text-main items-center shadow-md active:from-yellow-500 transition-all duration-200 active:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-500;
+  }
 }
